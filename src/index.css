@@ -1,0 +1,80 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(70px, auto) repeat(5, 70px);
+  border: 2px solid black;
+  width: 20rem;
+}
+
+#displayScreen {
+  text-align: right;
+  align-content: center;
+  padding-right: 5px;
+  grid-column: 1 / -1;
+  background-color: rgba(235, 195, 195, 0.753);
+  border-bottom: 2px solid black;
+  font-size: 2rem;
+  overflow-wrap: break-word;
+  min-height: 6rem;
+}
+
+#output {
+  min-height: 3rem;
+}
+
+#display {
+  min-height: 3rem;
+}
+
+button {
+  margin: 1px;
+}
+
+#zero {
+  grid-column: span 2;
+  background-color: rgba(70, 68, 68, 0.527);
+}
+
+#equals {
+  background-color: rgb(56, 122, 122);
+  grid-column: 4;
+  grid-row: 5 / 7;
+}
+
+button:nth-of-type(n + 1):nth-of-type(-1n + 2) {
+  background-color: orange;
+}
+
+button:nth-of-type(n + 3) {
+  background-color: rgba(48, 36, 36, 0.808);
+}
+
+button:nth-of-type(n + 5):nth-of-type(-1n + 7) {
+  background-color: rgba(70, 68, 68, 0.527);
+}
+
+button:nth-of-type(n + 9):nth-of-type(-1n + 11) {
+  background-color: rgba(70, 68, 68, 0.527);
+}
+
+button:nth-of-type(n + 13):nth-of-type(-1n + 15) {
+  background-color: rgba(70, 68, 68, 0.527);
+}
+
+#decimal {
+  align-content: center;
+  font-size: 2rem;
+  background-color: orange;
+}
